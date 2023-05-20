@@ -3,6 +3,7 @@
 #include"Course.h"
 #include "Student.h"
 #include "studentname.h"
+#include "courselistitem.h"
 namespace UMS {
 
 	using namespace System;
@@ -200,6 +201,16 @@ private: System::Windows::Forms::Panel^ panel11;
 private: System::Windows::Forms::Button^ StudentData;
 private: System::Windows::Forms::PictureBox^ pictureBox8;
 private: System::Windows::Forms::Panel^ panel5;
+private: System::Windows::Forms::Panel^ pnlCoursedataedit;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
+private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::TextBox^ textBox7;
+private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::PictureBox^ pictureBox9;
 
 
 
@@ -280,6 +291,8 @@ private: System::Windows::Forms::Panel^ panel5;
 			this->sideBar = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->pnlOfbtns = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
@@ -300,6 +313,14 @@ private: System::Windows::Forms::Panel^ panel5;
 			this->StudentData = (gcnew System::Windows::Forms::Button());
 			this->slideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
+			this->pnlCoursedataedit = (gcnew System::Windows::Forms::Panel());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->pnlOfStudentOfCourse = (gcnew System::Windows::Forms::Panel());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -397,6 +418,7 @@ private: System::Windows::Forms::Panel^ panel5;
 			this->sideBar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			this->pnlOfbtns->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
@@ -404,6 +426,7 @@ private: System::Windows::Forms::Panel^ panel5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->pnlOfPanels->SuspendLayout();
+			this->pnlCoursedataedit->SuspendLayout();
 			this->pnlOfStudentOfCourse->SuspendLayout();
 			this->panel6->SuspendLayout();
 			this->pnlEditStudent->SuspendLayout();
@@ -454,6 +477,8 @@ private: System::Windows::Forms::Panel^ panel5;
 			// 
 			// pnlOfbtns
 			// 
+			this->pnlOfbtns->Controls->Add(this->button4);
+			this->pnlOfbtns->Controls->Add(this->pictureBox9);
 			this->pnlOfbtns->Controls->Add(this->panel5);
 			this->pnlOfbtns->Controls->Add(this->pictureBox8);
 			this->pnlOfbtns->Controls->Add(this->panel4);
@@ -475,6 +500,41 @@ private: System::Windows::Forms::Panel^ panel5;
 			this->pnlOfbtns->Name = L"pnlOfbtns";
 			this->pnlOfbtns->Size = System::Drawing::Size(275, 332);
 			this->pnlOfbtns->TabIndex = 2;
+			// 
+			// button4
+			// 
+			this->button4->AutoSize = true;
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->button4->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->button4->ForeColor = System::Drawing::Color::Tan;
+			this->button4->Location = System::Drawing::Point(65, 219);
+			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(161, 46);
+			this->button4->TabIndex = 17;
+			this->button4->Text = L"Edit course data";
+			this->button4->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button4->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->button4->UseCompatibleTextRendering = true;
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &adminHome::button4_Click);
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(17, 219);
+			this->pictureBox9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(39, 46);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox9->TabIndex = 16;
+			this->pictureBox9->TabStop = false;
+			this->pictureBox9->Click += gcnew System::EventHandler(this, &adminHome::pictureBox9_Click);
 			// 
 			// panel5
 			// 
@@ -747,16 +807,124 @@ private: System::Windows::Forms::Panel^ panel5;
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlCoursedataedit);
+			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfEditCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Location = System::Drawing::Point(61, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(983, 472);
 			this->pnlOfPanels->TabIndex = 1;
+			// 
+			// pnlCoursedataedit
+			// 
+			this->pnlCoursedataedit->BackColor = System::Drawing::Color::Transparent;
+			this->pnlCoursedataedit->Controls->Add(this->label33);
+			this->pnlCoursedataedit->Controls->Add(this->label34);
+			this->pnlCoursedataedit->Controls->Add(this->button2);
+			this->pnlCoursedataedit->Controls->Add(this->flowLayoutPanel1);
+			this->pnlCoursedataedit->Controls->Add(this->label35);
+			this->pnlCoursedataedit->Controls->Add(this->label39);
+			this->pnlCoursedataedit->Controls->Add(this->textBox7);
+			this->pnlCoursedataedit->Location = System::Drawing::Point(1, -33);
+			this->pnlCoursedataedit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pnlCoursedataedit->Name = L"pnlCoursedataedit";
+			this->pnlCoursedataedit->Size = System::Drawing::Size(980, 538);
+			this->pnlCoursedataedit->TabIndex = 6;
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->BackColor = System::Drawing::Color::Transparent;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Cooper Black", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label33->ForeColor = System::Drawing::Color::Tan;
+			this->label33->Location = System::Drawing::Point(3, 77);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(274, 35);
+			this->label33->TabIndex = 17;
+			this->label33->Text = L"Edit course data:";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->BackColor = System::Drawing::Color::Tan;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label34->Location = System::Drawing::Point(12, 81);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(0, 20);
+			this->label34->TabIndex = 16;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Tan;
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
+				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->button2->FlatAppearance->BorderSize = 3;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->button2->Location = System::Drawing::Point(255, 218);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(117, 38);
+			this->button2->TabIndex = 15;
+			this->button2->Text = L"view";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &adminHome::button2_Click_1);
+			// 
+			// flowLayoutPanel1
+			// 
+			this->flowLayoutPanel1->AutoScroll = true;
+			this->flowLayoutPanel1->BackColor = System::Drawing::Color::Transparent;
+			this->flowLayoutPanel1->Location = System::Drawing::Point(647, 67);
+			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
+			this->flowLayoutPanel1->Size = System::Drawing::Size(277, 417);
+			this->flowLayoutPanel1->TabIndex = 4;
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->BackColor = System::Drawing::Color::Tan;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label35->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label35->Location = System::Drawing::Point(114, 192);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(403, 20);
+			this->label35->TabIndex = 13;
+			this->label35->Text = L"not found:-> please enter another course name";
+			this->label35->Visible = false;
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->BackColor = System::Drawing::Color::Tan;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label39->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label39->Location = System::Drawing::Point(10, 128);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(462, 20);
+			this->label39->TabIndex = 7;
+			this->label39->Text = L"please enter the name of the course you want to edit:";
+			// 
+			// textBox7
+			// 
+			this->textBox7->BackColor = System::Drawing::Color::Linen;
+			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->textBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox7->Location = System::Drawing::Point(54, 154);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(587, 27);
+			this->textBox7->TabIndex = 0;
 			// 
 			// pnlOfStudentOfCourse
 			// 
@@ -2095,6 +2263,7 @@ private: System::Windows::Forms::Panel^ panel5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			this->pnlOfbtns->ResumeLayout(false);
 			this->pnlOfbtns->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
@@ -2102,6 +2271,8 @@ private: System::Windows::Forms::Panel^ panel5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->pnlOfPanels->ResumeLayout(false);
+			this->pnlCoursedataedit->ResumeLayout(false);
+			this->pnlCoursedataedit->PerformLayout();
 			this->pnlOfStudentOfCourse->ResumeLayout(false);
 			this->pnlOfStudentOfCourse->PerformLayout();
 			this->panel6->ResumeLayout(false);
@@ -2161,6 +2332,7 @@ private: System::Void btnAddStudent_Click(System::Object^ sender, System::EventA
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = false;
 	pnlOfAddStudent->Visible = true;
+	pnlCoursedataedit->Visible = false;
 	
 }
 private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2169,6 +2341,7 @@ private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventAr
 	pnlOfStudentOfCourse->Visible = false;
 	pnlOfAddCourse->Visible = true;
 	pnlOfAddStudent->Visible = false;
+	pnlCoursedataedit->Visible = false;
 	
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2177,6 +2350,7 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = false;
 	pnlOfAddStudent->Visible = true;
+	pnlCoursedataedit->Visible = false;
 
 }
 private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2185,10 +2359,11 @@ private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArg
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = false;
 	pnlOfAddStudent->Visible = false;
+	pnlCoursedataedit->Visible = false;
 	
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+	pnlCoursedataedit->Visible = false;
 	pnlOfAddCourse->Visible = false;
 	pnlOfEditCourse->Visible = true;
 	pnlEditStudent->Visible = false;
@@ -2197,7 +2372,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	
 }
 private: System::Void StudentData_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+	pnlCoursedataedit->Visible = false;
 	pnlOfAddCourse->Visible = false;
 	pnlOfEditCourse->Visible = false;
 	pnlEditStudent->Visible = true;
@@ -2206,13 +2381,13 @@ private: System::Void StudentData_Click(System::Object^ sender, System::EventArg
 
 }
 private: System::Void StudentsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
-	slideBarTimer->Start();
+	
 	pnlOfAddCourse->Visible = false;
 	pnlOfEditCourse->Visible = false;
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = true;
 	pnlOfAddStudent->Visible = false;
-	
+	pnlCoursedataedit->Visible = false;
 
 }
 private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2221,14 +2396,14 @@ private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArg
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = true;
 	pnlOfAddStudent->Visible = false;
-	
+	pnlCoursedataedit->Visible = false;
 
 	label13->Visible = false;
 }
 private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
 	pnlOfAddCourse->Visible = false;
 	pnlOfEditCourse->Visible = true;
-
+	pnlCoursedataedit->Visible = false;
 	choosestdbt->Visible = false;
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = false;
@@ -2242,6 +2417,7 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 	pnlEditStudent->Visible = true;
 	pnlOfStudentOfCourse->Visible = false;
 	pnlOfAddStudent->Visible = false;
+	pnlCoursedataedit->Visible = false;
 	
 }
 private: System::Void pnlOfStudentOfCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -2658,6 +2834,62 @@ private: System::Void btnLogOut_Click(System::Object^ sender, System::EventArgs^
 }
 private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	bool foundd = false;
+	flowLayoutPanel1->Controls->Clear();
+
+	courselistitem^ tempp = gcnew courselistitem;
+
+	for each (auto course in Course::allCourses)
+	{
+		if (textBox7->Text == course->getName()) {
+			foundd = true;
+		}
+
+	}
+	if (foundd == true) {
+		for each (auto course in Course::allCourses)
+		{
+			if (textBox7->Text == course->getName())
+			{
+				tempp->setName(course->getName());
+				tempp->setCode(course->getCode());
+				tempp->setInstructor(course->getInstructor());
+				tempp->setIsRequirement(course->getIsRequirement());
+				tempp->setHours(course->getHours());
+				tempp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+			}
+
+		}
+
+		flowLayoutPanel1->Controls->Add(tempp);
+		label35->Visible = false;
+	}
+	else
+	{
+		label35->Visible = true;
+	}
+
+
+
+}
+private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlOfAddCourse->Visible = false;
+	pnlOfEditCourse->Visible = false;
+	pnlEditStudent->Visible = false;
+	pnlOfStudentOfCourse->Visible = false;
+	pnlOfAddStudent->Visible = false;
+	pnlCoursedataedit->Visible = true;
+
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlOfAddCourse->Visible = false;
+	pnlOfEditCourse->Visible = false;
+	pnlEditStudent->Visible = false;
+	pnlOfStudentOfCourse->Visible = false;
+	pnlOfAddStudent->Visible = false;
+	pnlCoursedataedit->Visible = true;
 }
 };
 }
